@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Audio Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ff6f61;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2em;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+
+        .feature-box {
+            background-color: #e6e6e6;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-box h3 {
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .upload-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff3d2e;
+        }
+
+        footer {
+            background-color: #292929;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PDF to Audio Converter</h1>
+</header>
+
+<div class="container">
+
+    <h2>Best PDF to Audio Converter</h2>
+    <p>Our PDF to Audio Converter helps you convert your documents into clear, natural-sounding audio. Choose your preferred language, voice tone, and start converting your files now!</p>
+
+    <div class="features">
+        <div class="feature-box">
+            <h3>Easy PDF Upload</h3>
+            <p>Upload your PDF files effortlessly and get started with converting them into audio in just a few steps.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Customize Voice</h3>
+            <p>Select from multiple voice tones (male, female, child) and choose your preferred language for the audio output.</p>
+        </div>
+        <div class="feature-box">
+            <h3>High-Quality Audio</h3>
+            <p>Enjoy high-quality audio files generated from your PDFs, ensuring a seamless listening experience.</p>
+        </div>
+    </div>
+
+    <div class="upload-section">
+        <form action="/convert" method="POST" enctype="multipart/form-data">
+            <label for="pdf-upload">Upload your PDF file:</label>
+            <input type="file" id="pdf-upload" name="pdf-upload" accept=".pdf" required>
+
+            <label for="language">Select Language:</label>
+            <select id="language" name="language" required>
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+
+            <label for="voice-tone">Select Voice Tone:</label>
+            <select id="voice-tone" name="voice-tone" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="kid">Kid</option>
+            </select>
+
+            <input type="submit" value="Convert to Audio">
+        </form>
+    </div>
+
+</div>
+
+<footer>
+    © 2024 PDF to Audio Converter. All rights reserved.
+</footer>
+
+</body>
+</html>
