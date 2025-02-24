@@ -30,7 +30,7 @@ def convert_to_audio():
     # Retrieve file from the form
     pdf_file = request.files['pdf-upload']
     language = request.form['language']
-    voice_tone = request.form['voice-tone']  # This will be used for tone settings (male/female/kids)
+    voice_tone = request.form['voice-tone']  # select voice tones
 
     # Validate file size
     if pdf_file.content_length > MAX_CONTENT_LENGTH:
